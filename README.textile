@@ -3,11 +3,19 @@ h3. To install on Ubuntu:
 <pre><code>cd /usr/share/munin/plugins
 git clone git://github.com/tjstein/php5-fpm-munin-plugins.git
 chmod +x php5-fpm-munin-plugins/phpfpm_*
+
 ln -s /usr/share/munin/plugins/php5-fpm-munin-plugins/phpfpm_average /etc/munin/plugins/phpfpm_average
 ln -s /usr/share/munin/plugins/php5-fpm-munin-plugins/phpfpm_connections /etc/munin/plugins/phpfpm_connections
 ln -s /usr/share/munin/plugins/php5-fpm-munin-plugins/phpfpm_memory /etc/munin/plugins/phpfpm_memory
 ln -s /usr/share/munin/plugins/php5-fpm-munin-plugins/phpfpm_status /etc/munin/plugins/phpfpm_status
 ln -s /usr/share/munin/plugins/php5-fpm-munin-plugins/phpfpm_processes /etc/munin/plugins/phpfpm_processes
+
+ln -s /usr/share/munin/plugins/php5-fpm-munin-plugins/phpfpm_average /etc/munin/plugins/phpfpm54_average
+ln -s /usr/share/munin/plugins/php5-fpm-munin-plugins/phpfpm_connections /etc/munin/plugins/phpfpm54_connections
+ln -s /usr/share/munin/plugins/php5-fpm-munin-plugins/phpfpm_memory /etc/munin/plugins/phpfpm54_memory
+ln -s /usr/share/munin/plugins/php5-fpm-munin-plugins/phpfpm_status /etc/munin/plugins/phpfpm54_status
+ln -s /usr/share/munin/plugins/php5-fpm-munin-plugins/phpfpm_processes /etc/munin/plugins/phpfpm54_processes
+
 service munin-node restart</code></pre>
 
 For the phpfpm_status and phpfpm_connections plugins, you'll need to enable the _status_ feature included in versions 5.3.2+ of PHP-FPM. The directive can be found in the php5-fpm.conf file:

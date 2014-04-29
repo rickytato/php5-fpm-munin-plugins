@@ -1,7 +1,7 @@
 [phpfpm_*]
 env.url http://localhost/php-fpm_status
 env.phpbin php-fpm
-env.phppool php55
+env.phppool php
 
 [phpfpm54_*]
 env.url http://localhost/php54-fpm_status
