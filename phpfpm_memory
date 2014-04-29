@@ -8,7 +8,7 @@ my $PHP_BIN = exists $ENV{'phpbin'} ? $ENV{'phpbin'} : "php5-fpm";
 my $PHP_POOL = exists $ENV{'phppool'} ? $ENV{'phppool'} : "www";
 
 if ( exists $ARGV[0] and $ARGV[0] eq "config" ) {
-        print "graph_title PHP5-FPM Memory Usage\n";
+        print "graph_title PHP5-FPM Memory Usage ( $PHP_POOL )\n";
         print "graph_vlabel RAM\n";
         print "graph_category PHP\n";
         print "ram.label ram\n";
